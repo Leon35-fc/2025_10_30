@@ -1,0 +1,56 @@
+//IMPORTO PRIMA LE FUNCTIONS E POI AGGIUNGO/SOVRASCRIVO LE MIE VARIABILI
+@import "./bootstrap-5.3.8/scss/functions";
+@import "./bootstrap-5.3.8/scss/variables";
+
+//Creo i font più piccoli da fs-7 a fs-10
+
+$font-size-base:              1rem !default;
+
+$h7-font-size:                $font-size-base * 0.9 !default;
+$h8-font-size:                $font-size-base * 0.8 !default;
+$h9-font-size:                $font-size-base * 0.7 !default;
+$h10-font-size:               $font-size-base * 0.5 !default;
+
+$extended-font-sizes:(
+    7: $h7-font-size,
+    8: $h8-font-size,
+    9: $h9-font-size,
+    10: $h10-font-size,
+);
+
+$font-sizes: map-merge($font-sizes, $extended-font-sizes);
+
+//creo i border da border-5 a border-10
+
+$greater-border-widths: (
+  6: 6px,
+  7: 7px,
+  8: 8px,
+  9: 9px,
+  10: 10px
+) !default;
+
+$border-widths: map-merge($border-widths, $greater-border-widths);
+
+//Cambio il padding di default dei button
+$btn-padding-y:         2.25rem;
+$btn-padding-x:         0.75rem;
+
+//Cambio le default delle card (background-color, color e border radius)
+$card-bg:                     $dark;
+$card-color:                  $info;
+$card-border-radius:           2rem;
+
+//Cambio il colore di danger
+
+
+$new-theme-colors:(
+  'danger':                     #ff0077,
+  'info':                       #00ffea,
+  'light':                      #f3eeff,
+);
+
+$theme-colors: map-merge($theme-colors, $new-theme-colors);
+
+//IMPORT FINALE DI TUTTO BOOTSTRAP
+@import "./bootstrap-5.3.8/scss/bootstrap.scss";
