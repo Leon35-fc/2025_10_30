@@ -3,7 +3,6 @@
 @import "./bootstrap-5.3.8/scss/variables";
 
 //Creo i font più piccoli da fs-7 a fs-10
-
 $font-size-base:              1rem !default;
 
 $h7-font-size:                $font-size-base * 0.9 !default;
@@ -21,7 +20,6 @@ $extended-font-sizes:(
 $font-sizes: map-merge($font-sizes, $extended-font-sizes);
 
 //creo i border da border-5 a border-10
-
 $greater-border-widths: (
   6: 6px,
   7: 7px,
@@ -41,6 +39,9 @@ $card-bg:                     $dark;
 $card-color:                  $info;
 $card-border-radius:           2rem;
 
+//Cambio il valore di deafault del gutters
+$grid-gutter-width: 0.5rem;
+
 //Cambio il colore di danger,info e light
 $new-theme-colors:(
   'danger':                     #ff0077,
@@ -51,7 +52,7 @@ $new-theme-colors:(
 $theme-colors: map-merge($theme-colors, $new-theme-colors);
 
 //Cambio il radius ai badge, info e button
-$new-pill-border-radius:  45px;
+$new-pill-border-radius: 50rem;
 
 $btn-border-radius: $new-pill-border-radius;
 $badge-border-radius: $new-pill-border-radius;
@@ -65,5 +66,22 @@ $epicode-colors:(
 );
 
 $theme-colors: map-merge($theme-colors, $epicode-colors);
+
+//Aggiungo i breakpoint
+$enhance-grid-breakpoints: (
+  3xl: 1600px,
+  4xl: 1800px,
+);
+
+$grid-breakpoints: map-merge($grid-breakpoints, $enhance-grid-breakpoints);
+
+//Aggiung i max-width dei breakpoints
+$enhance-container-max-widths: (
+  3xl: 1520px,
+  4xl: 1720px,
+);
+
+$container-max-widths: map-merge($container-max-widths, $enhance-container-max-widths);
+
 //IMPORT FINALE DI TUTTO BOOTSTRAP
 @import "./bootstrap-5.3.8/scss/bootstrap.scss";
