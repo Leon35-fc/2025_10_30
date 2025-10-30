@@ -41,9 +41,7 @@ $card-bg:                     $dark;
 $card-color:                  $info;
 $card-border-radius:           2rem;
 
-//Cambio il colore di danger
-
-
+//Cambio il colore di danger,info e light
 $new-theme-colors:(
   'danger':                     #ff0077,
   'info':                       #00ffea,
@@ -52,5 +50,20 @@ $new-theme-colors:(
 
 $theme-colors: map-merge($theme-colors, $new-theme-colors);
 
+//Cambio il radius ai badge, info e button
+$new-pill-border-radius:  45px;
+
+$btn-border-radius: $new-pill-border-radius;
+$badge-border-radius: $new-pill-border-radius;
+$input-border-radius: $new-pill-border-radius;
+
+//Aggiungo i colori epicode
+$epicode-colors:(
+  'epicode-1':      #5726c3,
+  'epicode-2':      #8625a5,
+  'epicode-3':      #cb2376,
+);
+
+$theme-colors: map-merge($theme-colors, $epicode-colors);
 //IMPORT FINALE DI TUTTO BOOTSTRAP
 @import "./bootstrap-5.3.8/scss/bootstrap.scss";
